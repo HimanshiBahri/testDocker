@@ -1,0 +1,9 @@
+sudo iptables -A INPUT -m state --state NEW,ESTABLISHED,RELATED --source 192.168.2.32 -p tcp --dport 22 -j ACCEPT
+sudo iptables -A INPUT -m state --state NEW,ESTABLISHED,RELATED -p tcp --dport 22 -j DROP
+
+
+sudo iptables -A INPUT --source 192.168.2.32 -p tcp --dport 22 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 22 -j DROP
+
+
+*iptables commands not working*
